@@ -39,9 +39,13 @@
     .card{background:#fff;border:1px solid #e3e9ee;border-radius:var(--radius);padding:18px}
     .card h3{margin:0 0 6px;font-family:Poppins;font-size:18px}
     .pill{display:inline-block;background:#fff2e8;color:#a95000;border:1px solid #ffd8b3;padding:4px 10px;border-radius:999px;font-size:12px;margin-bottom:8px}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-    .shot{border-radius:12px;overflow:hidden;border:1px solid #e3e9ee;height:240px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .shot-card{background:#fff;border:1px solid #e3e9ee;border-radius:12px;overflow:hidden;padding-bottom:15px;box-shadow:0 2px 4px rgba(0,0,0,0.02)}
+    .shot{height:240px;overflow:hidden;}
     .shot img{width:100%;height:100%}
+    .shot-desc{padding:12px 15px 0 15px;text-align:left}
+    .shot-desc h4{margin:0 0 5px 0;font-family:Poppins;font-size:16px;color:var(--brand)}
+    .shot-desc p{margin:0;font-size:13px;color:#555;line-height:1.4}
     .quote{background:#fff;border-left:4px solid var(--accent);padding:16px;border-radius:12px}
     .faq details{background:#fff;border:1px solid #e3e9ee;border-radius:12px;padding:14px}
     .faq details+details{margin-top:10px}
@@ -63,7 +67,7 @@
 </head>
 <body>
 
-  <!-- Banner Avviso / Dati Provvisori -->
+  <!-- Banner Avviso / Dati Provvisori Nascosti -->
   <div style="text-align: center; padding: 12px 20px; background-color: #222; color: #fff; font-family: sans-serif; font-size: 14px;">
     <p style="margin: 5px 0;"><strong>Costruzioni Karalji Sadat</strong> — Impresa Edile Ristrutturazioni</p>
     <p style="margin: 5px 0; color: #ccc;">Sito web in anteprima per cessione/vendita attività commerciale</p>
@@ -108,7 +112,7 @@
       </div>
     </section>
 
-    <!-- Sezione Servizi (ID aggiunto qui per far funzionare i pulsanti) -->
+    <!-- Sezione Servizi -->
     <section id="servizi" style="padding: 64px 20px; background-color: #f8f9fa; text-align: center;">
       <h2 style="margin-bottom: 10px;">I Nostri Servizi Edili</h2>
       <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto 40px auto;">
@@ -168,14 +172,45 @@
       </div>
     </section>
 
-    <!-- Lavori Recenti -->
+    <!-- Sezione Lavori Recenti (AGGIORNATA CON LE DESCRIZIONI SOTTO) -->
     <section id="lavori">
       <div class="wrap">
         <h2>Lavori recenti</h2>
         <div class="gallery">
-          <div class="shot"><img src="https://images.unsplash.com/photo-1581091014534-8987c1d6474a?q=80&w=1200&auto=format&fit=crop" alt="Ristrutturazione appartamento — posa cartongesso"></div>
-          <div class="shot"><img src="https://images.unsplash.com/photo-1581091870633-c9a5c9a1a9e0?q=80&w=1200&auto=format&fit=crop" alt="Cappotto termico su facciata condominiale"></div>
-          <div class="shot"><img src="https://images.unsplash.com/photo-1551256653-cba8f2a1d894?q=80&w=1200&auto=format&fit=crop" alt="Rifacimento bagno con piastrelle effetto pietra"></div>
+          
+          <!-- Foto 1: Rifacimento Bagno Moderno -->
+          <div class="shot-card">
+            <div class="shot">
+              <img src="images/foto%20sito%20web.jpg" alt="Ammodernamento bagno di design">
+            </div>
+            <div class="shot-desc">
+              <h4>Ristrutturazione Bagno</h4>
+              <p>Rifacimento completo degli impianti idraulici, posa di rivestimenti moderni e installazione di sanitari di design.</p>
+            </div>
+          </div>
+          
+          <!-- Foto 2: Rifacimento Tetto -->
+          <div class="shot-card">
+            <div class="shot">
+              <img src="images/foto%20sito%20web1.jpg" alt="Intervento strutturale su tetto">
+            </div>
+            <div class="shot-desc">
+              <h4>Rifacimento Tetti</h4>
+              <p>Intervento di manutenzione straordinaria della copertura con impermeabilizzazione, isolamento e posa delle nuove tegole.</p>
+            </div>
+          </div>
+          
+          <!-- Foto 3: Imbiancatura Pareti Interne -->
+          <div class="shot-card">
+            <div class="shot">
+              <img src="images/pexels-tima-miroshnichenko-6474471.jpg" alt="Tinteggiatura pareti interne appartamento">
+            </div>
+            <div class="shot-desc">
+              <h4>Imbiancatura Interni</h4>
+              <p>Rasatura a gesso protettiva e tinteggiatura di interni residenziali con finiture precise e prodotti antimuffa di alta qualità.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -208,8 +243,8 @@
         <h2>Recensioni clienti</h2>
         <div class="cards">
           <div class="card">
-            <p>“Professionisti veramente appassionati del proprio mestiere. Hanno eseguito i lavori curando ogni minimo dettaglio per lasciarci pienamente soddisfatti.”</p>
-            <p class="muted" style="margin-top: 10px; font-weight: bold;">— A. Karalji</p>
+            <p>“Muratori veramente di passione amano fare il loro lavoro e farvi rimanere contenti facendo il loro lavoro.”</p>
+            <p class="muted" style="margin-top: 10px; font-weight: bold;">— Abe karalji</p>
           </div>
           <div class="card">
             <p>“Isolamento a cappotto eseguito perfettamente e senza alcun disagio per i condòmini. Cantiere pulito e massima organizzazione.”</p>
@@ -269,7 +304,6 @@
             <h3 style="margin:0 0 15px;font-family:Poppins;color:#0e4a62">Informazioni ditta</h3>
             <p style="margin-bottom: 10px;">I dati fiscali completi e i contatti telefonici diretti verranno riattivati ed aggiornati al completamento delle operazioni legali di cessione d'attività.</p>
             <p><strong>Email di contatto provvisoria:</strong> info@karaljisadat.it</p>
-            <!-- Mappa di esempio centrata -->
             <iframe title="Mappa Cantiere" src="https://maps.google.com/maps?q=Toscana&t=&z=9&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;border-radius:12px;margin-top:15px"></iframe>
           </div>
         </div>
