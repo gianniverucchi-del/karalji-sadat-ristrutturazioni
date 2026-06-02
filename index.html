@@ -1,10 +1,11 @@
+
 <!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Costruzioni Karalji Sadat — Muratura e Ristrutturazioni</title>
-  <meta name="description" content="Impresa edile: muratura, ristrutturazioni chiavi in mano, cappotti termici, tetti. Sopralluogo e preventivo gratuitos.">
+  <title>Costruzioni Karalji Sadat — Ristrutturazioni edili a Siena</title>
+  <meta name="description" content="Impresa edile a Siena e provincia: muratura, ristrutturazioni chiavi in mano, cappotti termici, tetti. Sopralluogo e preventivo gratuiti.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=600;700&family=Inter:wght=400;500;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -24,6 +25,7 @@
     .logo span{font-family:Poppins,system-ui;font-weight:700}
     .menu{display:flex;align-items:center;gap:22px}
     .cta{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700}
+    .btn-call-nav{background:#28a745;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;border:0;font-family:inherit;}
     .hero{padding:72px 0 48px;background:linear-gradient(180deg,#ffffff, #eef3f6)}
     .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
     h1{font-family:Poppins,system-ui;font-size:42px;line-height:1.15;margin:0 0 12px;color:var(--brand)}
@@ -33,12 +35,12 @@
     .buttons{display:flex;gap:12px;flex-wrap:wrap}
     .btn{background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700}
     .btn.secondary{background:#fff;color:var(--brand);border:1px solid #cfe0e7}
+    .btn.call-action{background:#28a745;color:#fff;cursor:pointer;border:0;font-size:16px;font-family:inherit;}
     section{padding:64px 0}
-    h2{font-family:Poppins,system-ui;font-size:28px;margin:0 0 22px;color:var(--brand)}
+    h2{font-family:Poppins,system-ui;font-size:28px;margin:0 0 22px;color:var(--brand);text-align:center}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:#fff;border:1px solid #e3e9ee;border-radius:var(--radius);padding:18px}
     .card h3{margin:0 0 6px;font-family:Poppins;font-size:18px}
-    .pill{display:inline-block;background:#fff2e8;color:#a95000;border:1px solid #ffd8b3;padding:4px 10px;border-radius:999px;font-size:12px;margin-bottom:8px}
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .shot-card{background:#fff;border:1px solid #e3e9ee;border-radius:12px;overflow:hidden;padding-bottom:15px;box-shadow:0 2px 4px rgba(0,0,0,0.02)}
     .shot{height:240px;overflow:hidden;}
@@ -46,6 +48,14 @@
     .shot-desc{padding:12px 15px 0 15px;text-align:left}
     .shot-desc h4{margin:0 0 5px 0;font-family:Poppins;font-size:16px;color:var(--brand)}
     .shot-desc p{margin:0;font-size:13px;color:#555;line-height:1.4}
+    
+    /* Sezione Prima e Dopo */
+    .compare-container{background:#fff;border:1px solid #e3e9ee;border-radius:16px;padding:24px;max-width:850px;margin:0 auto;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .compare-box{position:relative;border-radius:8px;overflow:hidden;height:320px}
+    .compare-box img{width:100%;height:100%}
+    .compare-label{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,0.7);color:#fff;padding:4px 12px;font-size:12px;font-weight:700;border-radius:4px;text-transform:uppercase;letter-spacing:1px}
+    
     .quote{background:#fff;border-left:4px solid var(--accent);padding:16px;border-radius:12px}
     .faq details{background:#fff;border:1px solid #e3e9ee;border-radius:12px;padding:14px}
     .faq details+details{margin-top:10px}
@@ -60,14 +70,21 @@
     .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     .hero-img-box{border-radius: var(--radius);overflow: hidden;box-shadow: 0 10px 25px rgba(0,0,0,0.08);border: 1px solid #e2e8ee;}
     @media (max-width:900px){
-      .hero .grid, .cards, .gallery, .cols, form{grid-template-columns:1fr}
-      .menu{gap:12px;font-size:14px}
-      .menu .cta{padding:8px 12px}
+      .hero .grid, .cards, .gallery, .cols, form, .compare-grid{grid-template-columns:1fr}
+      .menu{gap:10px;font-size:13px}
+      .menu .cta, .btn-call-nav{padding:6px 10px; font-size:12px}
+      .compare-box{height:220px}
     }
   </style>
+  <script>
+    function mostraAvvisoContatto() {
+      alert("Il contatto telefonico diretto verrà inserito e attivato solo al completamento delle operazioni legali di cessione dell'attività.");
+    }
+  </script>
 </head>
 <body>
 
+  <!-- Banner Avviso -->
   <div style="text-align: center; padding: 12px 20px; background-color: #222; color: #fff; font-family: sans-serif; font-size: 14px;">
     <p style="margin: 5px 0;"><strong>Costruzioni Karalji Sadat</strong> — Impresa Edile Ristrutturazioni</p>
     <p style="margin: 5px 0; color: #ccc;">Sito web in anteprima per cessione/vendita attività commerciale</p>
@@ -83,26 +100,28 @@
         <a href="#servizi">Servizi</a>
         <a href="#lavori">Lavori</a>
         <a href="#chi-siamo">Chi siamo</a>
-        <a href="#recensioni">Recensioni</a>
         <a href="#contatti" class="cta">Preventivo</a>
+        <!-- Pulsante con Avviso nel Menu Navigazione -->
+        <button onclick="mostraAvvisoContatto()" class="btn-call-nav">📞 Contatto Telefonico</button>
       </nav>
     </div>
   </header>
 
   <main id="top">
+    <!-- Hero Section -->
     <section class="hero">
       <div class="wrap grid">
         <div>
-          <h1>Muratura e ristrutturazioni chiavi in mano</h1>
-          <p class="sub">Qualità artigianale, tempi certi. Rinnoviamo case, immobili commerciali e condomìni.</p>
+          <h1>Muratura e ristrutturazioni a Siena e provincia</h1>
+          <p class="sub">Qualità artigianale, tempi certi. Rinnoviamo case, immobili commerciali e condomìni in tutto il territorio senese.</p>
           <div class="badges">
-            <span class="badge">Sopralluogo gratuito</span>
+            <span class="badge">Sopralluogo gratuito Siena e dintorni</span>
             <span class="badge">Capitolato chiaro</span>
             <span class="badge">Garanzia sui lavori</span>
           </div>
           <div class="buttons">
             <a href="#contatti" class="btn">Richiedi un preventivo</a>
-            <a href="#servizi" class="btn secondary">Scopri i servizi</a>
+            <button onclick="mostraAvvisoContatto()" class="btn call-action">📞 Chiama Ora</button>
           </div>
         </div>
         <div class="hero-img-box">
@@ -111,10 +130,11 @@
       </div>
     </section>
 
+    <!-- Sezione Servizi -->
     <section id="servizi" style="padding: 64px 20px; background-color: #f8f9fa; text-align: center;">
       <h2 style="margin-bottom: 10px;">I Nostri Servizi Edili</h2>
       <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto 40px auto;">
-        Soluzioni professionali chiavi in mano per la costruzione, il restauro e la manutenzione della tua casa.
+        Soluzioni professionali chiavi in mano per la costruzione, il restauro e la manutenzione della tua casa a Siena.
       </p>
 
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 0 auto;">
@@ -164,6 +184,7 @@
       </div>
     </section>
 
+    <!-- Sezione Lavori Recenti -->
     <section id="lavori">
       <div class="wrap">
         <h2>Lavori recenti</h2>
@@ -181,7 +202,7 @@
           
           <div class="shot-card">
             <div class="shot">
-              <img src="https://images.pexels.com/photos/5974394/pexels-photo-5974394.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lavori di rifacimento tetto e carpenteria">
+              <img src="https://images.pexels.com/photos/5974394/pexels-photo-5974394.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lavori di rifacimento tetto">
             </div>
             <div class="shot-desc">
               <h4>Rifacimento Tetti</h4>
@@ -203,12 +224,39 @@
       </div>
     </section>
 
+    <!-- Sezione: Trasformazioni Prima e Dopo -->
+    <section id="prima-dopo" style="background-color: #eef3f6;">
+      <div class="wrap">
+        <h2>Esempio di Trasformazione (Prima / Dopo)</h2>
+        <p style="text-align: center; color: #555; max-width: 600px; margin: -10px auto 30px auto; font-size: 15px;">
+          Guarda la qualità dei nostri interventi di ristrutturazione completa, dalle prime fases di demolizione fino alla consegna finale.
+        </p>
+        
+        <div class="compare-container">
+          <div class="compare-grid">
+            <div class="compare-box">
+              <img src="https://images.pexels.com/photos/5691642/pexels-photo-5691642.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Stato iniziale bagno demolito cantiere">
+              <span class="compare-label" style="background-color: #dc3545;">Prima (Cantiere)</span>
+            </div>
+            <div class="compare-box">
+              <img src="https://images.pexels.com/photos/1454834/pexels-photo-1454834.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bagno moderno terminato ristrutturato">
+              <span class="compare-label" style="background-color: #28a745;">Dopo (Finito)</span>
+            </div>
+          </div>
+          <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #444;">
+            <strong>Progetto:</strong> Rifacimento completo bagno residenziale (impianti, massetto, piastrelle e sanitari).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chi Siamo -->
     <section id="chi-siamo">
       <div class="wrap cols">
         <div>
           <h2>Chi siamo</h2>
           <p style="font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 15px;">
-            La nostra ditta porta avanti con passione opere edili e di ristrutturazione di alta qualità, unendo la solida esperienza artigiana alla massima trasparenza verso il cliente.
+            La nostra ditta porta avanti con passione opere edili e di ristrutturazione di alta qualità nella provincia di Siena, unendo la solida esperienza artigiana alla massima trasparenza verso il cliente.
           </p>
           <ul style="padding-left: 20px;">
             <li>Capitolati e cronoprogramma lavori chiari</li>
@@ -224,6 +272,7 @@
       </div>
     </section>
 
+    <!-- Recensioni -->
     <section id="recensioni">
       <div class="wrap">
         <h2>Recensioni clienti</h2>
@@ -233,7 +282,7 @@
             <p class="muted" style="margin-top: 10px; font-weight: bold;">— Abe karalji</p>
           </div>
           <div class="card">
-            <p>“Isolamento a cappotto eseguito perfettamente e senza alcun disagio per i condòmini. Cantiere pulito e massima organizzazione.”</p>
+            <p>“Isolamento a cappotto eseguito perfettamente a Siena. Cantiere pulito e massima organizzazione anche con i vicini.”</p>
             <p class="muted" style="margin-top: 10px; font-weight: bold;">— Studio Bianchi, Amministrazioni</p>
           </div>
           <div class="card">
@@ -244,30 +293,28 @@
       </div>
     </section>
 
+    <!-- FAQ -->
     <section id="faq" class="faq">
       <div class="wrap">
         <h2>Domande frequenti</h2>
         <details>
           <summary>Quanto tempo richiede una ristrutturazione completa?</summary>
-          <p style="margin-top: 10px; color: #555;">Per un appartamento medio di 80–100 m² stimiamo circa 8–10 settimane di lavorazione, variabili a seconda delle specifiche finiture scelte e delle tempistiche di fornitura materiali.</p>
+          <p style="margin-top: 10px; color: #555;">Per un appartamento medio di 80–100 m² stimiamo circa 8–10 settimane di lavorazione, variabili a seconda delle specifiche finiture scelte.</p>
         </details>
         <details>
-          <summary>Fornite supporto per pratiche edilizie e bonus?</summary>
-          <p style="margin-top: 10px; color: #555;">Sì, collaboriamo attivamente con geometri e architetti partner per la gestione di CILA, SCIA e per l'allineamento alle attuali normative di detrazione fiscale edilizia.</p>
-        </details>
-        <details>
-          <summary>I lavori sono coperti da garanzia?</summary>
-          <p style="margin-top: 10px; color: #555;">Certamente. Tutti i nostri interventi sono garantiti a norma di legge e coperti da polizza assicurativa aziendale a tutela del cliente e della proprietà.</p>
+          <summary>Fornite supporto per pratiche edilizie e bonus a Siena?</summary>
+          <p style="margin-top: 10px; color: #555;">Sì, collaboriamo con tecnici e geometri locali per la gestione di CILA, SCIA e per l'allineamento alle attuali normative di detrazione fiscale.</p>
         </details>
       </div>
     </section>
 
+    <!-- Contatti -->
     <section id="contatti">
       <div class="wrap">
         <div class="cta-band">
           <div>
             <h2 style="color:#fff;margin:0 0 6px">Sopralluogo e preventivo gratuiti</h2>
-            <p style="margin:0">Risposta rapida alle vostre richieste entro 24–72 ore.</p>
+            <p style="margin:0">Risposta rapida alle vostre richieste a Siena e provincia entro 24–72 ore.</p>
           </div>
           <a href="#form" class="btn" style="background:#fff;color:#0e4a62">Invia un messaggio</a>
         </div>
@@ -279,27 +326,32 @@
               <input type="text" name="nome" placeholder="Nome e cognome" required>
               <input type="tel" name="telefono" placeholder="Numero di telefono" required>
               <input type="email" name="email" placeholder="Indirizzo Email">
-              <input type="text" name="citta" placeholder="Città dell'immobile">
-              <textarea name="messaggio" placeholder="Descrivi brevemente l'intervento richiesto (es. ristrutturazione bagno, opere in cartongesso, tinteggiatura...)"></textarea>
+              <input type="text" name="citta" placeholder="Comune (es. Siena, Poggibonsi...)">
+              <textarea name="messaggio" placeholder="Descrivi brevemente l'intervento richiesto..."></textarea>
               <button type="submit">Invia messaggio</button>
             </form>
           </div>
           <div>
-            <h3 style="margin:0 0 15px;font-family:Poppins;color:#0e4a62">Informazioni ditta</h3>
-            <p style="margin-bottom: 10px;">I dati fiscali completi e i contatti telefonici diretti verranno riattivati ed aggiornati al completamento delle operazioni legali di cessione d'attività.</p>
-            <p><strong>Email di contatto provvisoria:</strong> info@karaljisadat.it</p>
-            <iframe title="Mappa Cantiere" src="https://maps.google.com/maps?q=Toscana&t=&z=9&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;border-radius:12px;margin-top:15px"></iframe>
+            <h3 style="margin:0 0 15px;font-family:Poppins;color:#0e4a62">Contatti e info ditta</h3>
+            <p style="margin-bottom: 15px;">I dati fiscali completi verranno riattivati ed aggiornati al completamento delle operazioni legali di cessione d'attività.</p>
+            
+            <!-- Bottone Contatto Informativo in sezione Contatti -->
+            <button onclick="mostraAvvisoContatto()" style="display: inline-block; background-color: #28a745; color: white; padding: 14px 20px; border-radius: 10px; font-weight: bold; font-size: 16px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 0; cursor: pointer; font-family: inherit;">📞 Contatto Telefonico</button>
+            
+            <p><strong>Email provvisoria:</strong> info@karaljisadat.it</p>
+            <iframe title="Mappa Cantiere" src="https://maps.google.com/maps?q=Siena&t=&z=10&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;border-radius:12px;margin-top:15px"></iframe>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="wrap">
       <p style="margin: 5px 0; color: #fff; font-size: 16px;"><strong>© 2026 Karalji Sadat Ristrutturazioni</strong></p>
-      <p style="margin: 5px 0; color: #888;">Ditta Individuale / Impresa Edile Artigiana</p>
-      <p style="margin: 5px 0; color: #666; font-size: 12px;">P.IVA e Contatti in corso di aggiornamento per cessione aziendale | Assicurazione RC lavori attiva</p>
+      <p style="margin: 5px 0; color: #888;">Ditta Individuale / Operante a Siena e Provincia</p>
+      <p style="margin: 5px 0; color: #666; font-size: 12px;">P.IVA e Contatti in corso di aggiornamento per cessione aziendale | Assicurazione RC attiva</p>
       <p style="margin: 15px 0 0 0; font-size: 11px; color: #444;">Sito web in anteprima sviluppato da <a href="#" style="color:#777; text-decoration: underline;">Ryan Verucchi</a></p>
       <p style="margin-top: 15px; font-size: 12px;"><a href="#top">Torna su ↑</a></p>
     </div>
