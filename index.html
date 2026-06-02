@@ -29,12 +29,8 @@
     .menu a:hover{color:var(--brand)}
     .nav-actions{display:flex;align-items:center;gap:10px}
     
-    /* Struttura base bottoni della Nav */
+    /* Bottoni Navbar */
     .btn-nav{padding:10px 16px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;border:0;font-family:inherit;display:inline-flex;align-items:center;gap:6px}
-    
-    /* COLORI PULSANTI NAVBAR */
-    .cta-blue{background:#0e4a62;color:#fff}
-    .cta-blue:hover{background:#136685}
     
     .cta-green{background:#28a745;color:#fff}
     .cta-green:hover{background:#218838}
@@ -65,13 +61,6 @@
     .shot-desc h4{margin:0 0 5px 0;font-family:Poppins;font-size:16px;color:var(--brand)}
     .shot-desc p{margin:0;font-size:13px;color:#555;line-height:1.4}
     
-    /* Sezione Prima e Dopo */
-    .compare-container{background:#fff;border:1px solid #e3e9ee;border-radius:16px;padding:24px;max-width:850px;margin:0 auto;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
-    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .compare-box{position:relative;border-radius:8px;overflow:hidden;height:380px}
-    .compare-box img{width:100%;height:100%}
-    .compare-label{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,0.7);color:#fff;padding:4px 12px;font-size:12px;font-weight:700;border-radius:4px;text-transform:uppercase;letter-spacing:1px}
-    
     .quote{background:#fff;border-left:4px solid var(--accent);padding:16px;border-radius:12px}
     .faq details{background:#fff;border:1px solid #e3e9ee;border-radius:12px;padding:14px}
     .faq details+details{margin-top:10px}
@@ -91,8 +80,7 @@
       .nav-right{flex-direction:column;gap:12px;width:100%}
       .menu{justify-content:center;width:100%}
       .nav-actions{justify-content:center;width:100%}
-      .hero .grid, .cards, .gallery, .cols, form, .compare-grid{grid-template-columns:1fr}
-      .compare-box{height:260px}
+      .hero .grid, .cards, .gallery, .cols, form{grid-template-columns:1fr}
     }
   </style>
   <script>
@@ -103,7 +91,6 @@
 </head>
 <body>
 
-  <!-- Banner Avviso -->
   <div style="text-align: center; padding: 12px 20px; background-color: #222; color: #fff; font-family: sans-serif; font-size: 14px;">
     <p style="margin: 5px 0;"><strong>Costruzioni Karalji Sadat</strong> — Impresa Edile Ristrutturazioni</p>
     <p style="margin: 5px 0; color: #ccc;">Sito web in anteprima per cessione/vendita attività commerciale</p>
@@ -122,7 +109,6 @@
           <a href="#chi-siamo">Chi siamo</a>
         </nav>
         <div class="nav-actions">
-          <a href="#contatti" class="btn-nav cta-blue">Richiedi Preventivo</a>
           <button onclick="mostraAvvisoContatto()" class="btn-nav cta-green"><span class="icon-purple">📞</span>Chiama Ora</button>
         </div>
       </div>
@@ -130,7 +116,6 @@
   </header>
 
   <main id="top">
-    <!-- Hero Section -->
     <section class="hero">
       <div class="wrap grid">
         <div>
@@ -151,7 +136,6 @@
       </div>
     </section>
 
-    <!-- Sezione Servizi -->
     <section id="servizi" style="padding: 64px 20px; background-color: #f8f9fa; text-align: center;">
       <h2 style="margin-bottom: 10px;">I Nostri Servizi Edili</h2>
       <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto 40px auto;">
@@ -205,10 +189,9 @@
       </div>
     </section>
 
-    <!-- Sezione I nostri interventi -->
     <section id="lavori">
       <div class="wrap">
-        <h2>I nostri interventi</h2>
+        <h2>Lavori recenti</h2>
         <div class="gallery">
           
           <div class="shot-card">
@@ -223,7 +206,7 @@
           
           <div class="shot-card">
             <div class="shot">
-              <img src="https://images.pexels.com/photos/5974373/pexels-photo-5974373.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Muratore al lavoro con livella su newlinea parete">
+              <img src="https://images.pexels.com/photos/5974373/pexels-photo-5974373.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Muratore al lavoro con livella su nuova parete">
             </div>
             <div class="shot-desc">
               <h4>Opere Murarie</h4>
@@ -245,33 +228,6 @@
       </div>
     </section>
 
-    <!-- Sezione: Prima e Dopo -->
-    <section id="prima-dopo" style="background-color: #eef3f6;">
-      <div class="wrap">
-        <h2>Prima e Dopo</h2>
-        <p style="text-align: center; color: #555; max-width: 600px; margin: -10px auto 30px auto; font-size: 15px;">
-          Guarda la qualità dei nostri interventi di ristrutturazione completa, dalle condizioni iniziali dell'immobile fino alla consegna finale.
-        </p>
-        
-        <div class="compare-container">
-          <div class="compare-grid">
-            <div class="compare-box">
-              <img src="image_39bcac.jpg" alt="Bagno originario prima dei lavori">
-              <span class="compare-label" style="background-color: #dc3545;">Prima</span>
-            </div>
-            <div class="compare-box">
-              <img src="https://images.pexels.com/photos/1125137/pexels-photo-1125137.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bagno moderno completamente finito con box doccia in cristallo, sanitari sospesi e piastrelle chiare">
-              <span class="compare-label" style="background-color: #28a745;">Dopo</span>
-            </div>
-          </div>
-          <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #444;">
-            <strong>Progetto:</strong> Rifacimento totale ambiente bagno. Rimozione del vecchio rivestimento, rifacimento completo della linea di scarico e idrica, posa di pavimentazione moderna e installazione di box doccia in cristallo con finiture lucide ad alta luminosità.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chi Siamo -->
     <section id="chi-siamo">
       <div class="wrap cols">
         <div>
@@ -293,7 +249,6 @@
       </div>
     </section>
 
-    <!-- Recensioni -->
     <section id="recensioni">
       <div class="wrap">
         <h2>Recensioni clienti</h2>
@@ -314,7 +269,6 @@
       </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq" class="faq">
       <div class="wrap">
         <h2>Domande frequenti</h2>
@@ -333,7 +287,6 @@
       </div>
     </section>
 
-    <!-- Contatti -->
     <section id="contatti">
       <div class="wrap">
         <div class="cta-band">
@@ -370,7 +323,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="wrap">
       <p style="margin: 5px 0; color: #fff; font-size: 16px;"><strong>© 2026 Karalji Sadat Ristrutturazioni</strong></p>
