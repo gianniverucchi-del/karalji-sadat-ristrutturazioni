@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=600;700&family=Inter:wght=400;500;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f3f5f7; --text:#1f2a30; --brand:#0e4a62; --accent:#0e4a62; --white:#fff; --muted:#7b8892;
+      --bg:#f3f5f7; --text:#1f2a30; --brand:#0e4a62; --accent:#ff7a00; --white:#fff; --muted:#7b8892;
       --radius:14px;
     }
     *{box-sizing:border-box}
@@ -25,7 +25,7 @@
     .logo span{font-family:Poppins,system-ui;font-weight:700}
     .menu{display:flex;align-items:center;gap:22px}
     .cta{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700}
-    .btn-call-nav{background:#0e4a62;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;border:0;font-family:inherit;}
+    .btn-call-nav{background:#28a745;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;border:0;font-family:inherit;}
     .hero{padding:72px 0 48px;background:linear-gradient(180deg,#ffffff, #eef3f6)}
     .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
     h1{font-family:Poppins,system-ui;font-size:42px;line-height:1.15;margin:0 0 12px;color:var(--brand)}
@@ -35,7 +35,7 @@
     .buttons{display:flex;gap:12px;flex-wrap:wrap}
     .btn{background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700}
     .btn.secondary{background:#fff;color:var(--brand);border:1px solid #cfe0e7}
-    .btn.call-action{background:#0e4a62;color:#fff;cursor:pointer;border:0;font-size:16px;font-family:inherit;}
+    .btn.call-action{background:#28a745;color:#fff;cursor:pointer;border:0;font-size:16px;font-family:inherit;}
     section{padding:64px 0}
     h2{font-family:Poppins,system-ui;font-size:28px;margin:0 0 22px;color:var(--brand);text-align:center}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -101,8 +101,8 @@
         <a href="#lavori">Lavori</a>
         <a href="#chi-siamo">Chi siamo</a>
         <a href="#contatti" class="cta">Preventivo</a>
-        <!-- Pulsante Menu Navigazione in Blu -->
-        <button onclick="mostraAvvisoContatto()" class="btn-call-nav">📞 Chiama ora</button>
+        <!-- Pulsante con Avviso nel Menu Navigazione -->
+        <button onclick="mostraAvvisoContatto()" class="btn-call-nav">📞 Contatto Telefonico</button>
       </nav>
     </div>
   </header>
@@ -121,8 +121,7 @@
           </div>
           <div class="buttons">
             <a href="#contatti" class="btn">Richiedi un preventivo</a>
-            <!-- Pulsante Hero in Blu -->
-            <button onclick="mostraAvvisoContatto()" class="btn call-action">📞 Chiama ora</button>
+            <button onclick="mostraAvvisoContatto()" class="btn call-action">📞 Chiama Ora</button>
           </div>
         </div>
         <div class="hero-img-box">
@@ -140,42 +139,42 @@
 
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 0 auto;">
         
-        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0e4a62; text-align: left;">
+        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #ff7a00; text-align: left;">
           <h3 style="color: #222; margin-top: 0; font-size: 18px;">🏗️ Ristrutturazioni Complete</h3>
           <p style="color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 0;">
             Interventi completi per appartamenti residenziali e villette, curati in ogni dettaglio strutturale ed estetico.
           </p>
         </div>
 
-        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0e4a62; text-align: left;">
+        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #ff7a00; text-align: left;">
           <h3 style="color: #222; margin-top: 0; font-size: 18px;">🏠 Opere Murarie e Intonaci</h3>
           <p style="color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 0;">
             Costruzione di pareti, ripristino e rifacimento di intonaci vecchi o danneggiati e rinforzi strutturali.
           </p>
         </div>
 
-        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0e4a62; text-align: left;">
+        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #ff7a00; text-align: left;">
           <h3 style="color: #222; margin-top: 0; font-size: 18px;">🪵 Pavimenti e Rivestimenti</h3>
           <p style="color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 0;">
             Posa in opera professionale di piastrelle, parquet e rivestimenti interni o esterni per bagni e cucine.
           </p>
         </div>
 
-        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0e4a62; text-align: left;">
+        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #ff7a00; text-align: left;">
           <h3 style="color: #222; margin-top: 0; font-size: 18px;">🪜 Rifacimento Tetti</h3>
           <p style="color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 0;">
             Manutenzione ordinaria, isolamento termico e rifacimento completo di manti di copertura e tetti.
           </p>
         </div>
 
-        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0e4a62; text-align: left;">
+        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #ff7a00; text-align: left;">
           <h3 style="color: #222; margin-top: 0; font-size: 18px;">🖌️ Imbiancatura e Verniciatura</h3>
           <p style="color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 0;">
             Servizi di imbiancatura per pareti interne ed esterne, finiture precise e trattamento contro l'umidità.
           </p>
         </div>
 
-        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0e4a62; text-align: left;">
+        <div style="flex: 1 1 300px; max-width: 340px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #ff7a00; text-align: left;">
           <h3 style="color: #222; margin-top: 0; font-size: 18px;">🧱 Isolamenti e Cartongesso</h3>
           <p style="color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 0;">
             Installazione di cappotti termici e pareti o controsoffitti in cartongesso per migliorare l'efficienza energetica.
@@ -230,19 +229,17 @@
       <div class="wrap">
         <h2>Esempio di Trasformazione (Prima / Dopo)</h2>
         <p style="text-align: center; color: #555; max-width: 600px; margin: -10px auto 30px auto; font-size: 15px;">
-          Guarda la qualità dei nostri interventi di ristrutturazione completa, dalle prime fasi di demolizione fino alla consegna finale.
+          Guarda la qualità dei nostri interventi di ristrutturazione completa, dalle prime fases di demolizione fino alla consegna finale.
         </p>
         
         <div class="compare-container">
           <div class="compare-grid">
-            <!-- Foto Cantiere Ristrutturazione Bagno -->
             <div class="compare-box">
               <img src="https://images.pexels.com/photos/5691642/pexels-photo-5691642.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Stato iniziale bagno demolito cantiere">
               <span class="compare-label" style="background-color: #dc3545;">Prima (Cantiere)</span>
             </div>
-            <!-- Foto Bagno Finito Moderno -->
             <div class="compare-box">
-              <img src="https://images.pexels.com/photos/1444421/pexels-photo-1444421.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bagno moderno terminato ristrutturato">
+              <img src="https://images.pexels.com/photos/1454834/pexels-photo-1454834.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bagno moderno terminato ristrutturato">
               <span class="compare-label" style="background-color: #28a745;">Dopo (Finito)</span>
             </div>
           </div>
@@ -338,8 +335,8 @@
             <h3 style="margin:0 0 15px;font-family:Poppins;color:#0e4a62">Contatti e info ditta</h3>
             <p style="margin-bottom: 15px;">I dati fiscali completi verranno riattivati ed aggiornati al completamento delle operazioni legali di cessione d'attività.</p>
             
-            <!-- Pulsante Sezione Contatti in Blu -->
-            <button onclick="mostraAvvisoContatto()" style="display: inline-block; background-color: #0e4a62; color: white; padding: 14px 20px; border-radius: 10px; font-weight: bold; font-size: 16px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 0; cursor: pointer; font-family: inherit;">📞 Chiama ora</button>
+            <!-- Bottone Contatto Informativo in sezione Contatti -->
+            <button onclick="mostraAvvisoContatto()" style="display: inline-block; background-color: #28a745; color: white; padding: 14px 20px; border-radius: 10px; font-weight: bold; font-size: 16px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 0; cursor: pointer; font-family: inherit;">📞 Contatto Telefonico</button>
             
             <p><strong>Email provvisoria:</strong> info@karaljisadat.it</p>
             <iframe title="Mappa Cantiere" src="https://maps.google.com/maps?q=Siena&t=&z=10&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;border-radius:12px;margin-top:15px"></iframe>
@@ -362,3 +359,4 @@
 
 </body>
 </html>
+ 
