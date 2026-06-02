@@ -18,25 +18,13 @@
     img{max-width:100%;display:block;height:auto;object-fit:cover}
     header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e2e8ee;z-index:50}
     .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
     .logo{display:flex;align-items:center;gap:10px;font-weight:700}
     .logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--brand),#136685);border-radius:8px;display:grid;place-items:center;color:#fff;font-family:Poppins,system-ui;font-weight:700}
     .logo span{font-family:Poppins,system-ui;font-weight:700}
-    
-    /* Navigazione a destra */
-    .nav-right{display:flex;align-items:center;gap:28px}
-    .menu{display:flex;align-items:center;gap:20px;font-weight:500;color:#4a5560}
-    .menu a:hover{color:var(--brand)}
-    .nav-actions{display:flex;align-items:center;gap:10px}
-    
-    /* Bottoni Navbar */
-    .btn-nav{padding:10px 16px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;border:0;font-family:inherit;display:inline-flex;align-items:center;gap:6px}
-    
-    .cta-green{background:#28a745;color:#fff}
-    .cta-green:hover{background:#218838}
-    
-    .icon-purple{color:#8a2be2;font-style:normal;font-weight:bold;margin-right:2px}
-    
+    .menu{display:flex;align-items:center;gap:22px}
+    .cta{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700}
+    .btn-call-nav{background:#28a745;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer;border:0;font-family:inherit;}
     .hero{padding:72px 0 48px;background:linear-gradient(180deg,#ffffff, #eef3f6)}
     .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
     h1{font-family:Poppins,system-ui;font-size:42px;line-height:1.15;margin:0 0 12px;color:var(--brand)}
@@ -45,14 +33,13 @@
     .badge{background:#e8f1f5;color:#0e4a62;border:1px solid #d3e3ea;padding:8px 12px;border-radius:999px;font-size:14px}
     .buttons{display:flex;gap:12px;flex-wrap:wrap}
     .btn{background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700}
-    
+    .btn.secondary{background:#fff;color:var(--brand);border:1px solid #cfe0e7}
+    .btn.call-action{background:#28a745;color:#fff;cursor:pointer;border:0;font-size:16px;font-family:inherit;}
     section{padding:64px 0}
     h2{font-family:Poppins,system-ui;font-size:28px;margin:0 0 22px;color:var(--brand);text-align:center}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:#fff;border:1px solid #e3e9ee;border-radius:var(--radius);padding:18px}
     .card h3{margin:0 0 6px;font-family:Poppins;font-size:18px}
-    
-    /* Galleria Lavori Recenti */
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .shot-card{background:#fff;border:1px solid #e3e9ee;border-radius:12px;overflow:hidden;padding-bottom:15px;box-shadow:0 2px 4px rgba(0,0,0,0.02)}
     .shot{height:240px;overflow:hidden;}
@@ -60,6 +47,13 @@
     .shot-desc{padding:12px 15px 0 15px;text-align:left}
     .shot-desc h4{margin:0 0 5px 0;font-family:Poppins;font-size:16px;color:var(--brand)}
     .shot-desc p{margin:0;font-size:13px;color:#555;line-height:1.4}
+    
+    /* Sezione Prima e Dopo */
+    .compare-container{background:#fff;border:1px solid #e3e9ee;border-radius:16px;padding:24px;max-width:850px;margin:0 auto;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .compare-box{position:relative;border-radius:8px;overflow:hidden;height:320px}
+    .compare-box img{width:100%;height:100%}
+    .compare-label{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,0.7);color:#fff;padding:4px 12px;font-size:12px;font-weight:700;border-radius:4px;text-transform:uppercase;letter-spacing:1px}
     
     .quote{background:#fff;border-left:4px solid var(--accent);padding:16px;border-radius:12px}
     .faq details{background:#fff;border:1px solid #e3e9ee;border-radius:12px;padding:14px}
@@ -74,13 +68,11 @@
     footer a{color:#fff;font-weight:500}
     .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     .hero-img-box{border-radius: var(--radius);overflow: hidden;box-shadow: 0 10px 25px rgba(0,0,0,0.08);border: 1px solid #e2e8ee;}
-    
-    @media (max-width:990px){
-      .nav{height:auto;flex-direction:column;padding:15px 20px;gap:12px}
-      .nav-right{flex-direction:column;gap:12px;width:100%}
-      .menu{justify-content:center;width:100%}
-      .nav-actions{justify-content:center;width:100%}
-      .hero .grid, .cards, .gallery, .cols, form{grid-template-columns:1fr}
+    @media (max-width:900px){
+      .hero .grid, .cards, .gallery, .cols, form, .compare-grid{grid-template-columns:1fr}
+      .menu{gap:10px;font-size:13px}
+      .menu .cta, .btn-call-nav{padding:6px 10px; font-size:12px}
+      .compare-box{height:220px}
     }
   </style>
   <script>
@@ -91,6 +83,7 @@
 </head>
 <body>
 
+  <!-- Banner Avviso -->
   <div style="text-align: center; padding: 12px 20px; background-color: #222; color: #fff; font-family: sans-serif; font-size: 14px;">
     <p style="margin: 5px 0;"><strong>Costruzioni Karalji Sadat</strong> — Impresa Edile Ristrutturazioni</p>
     <p style="margin: 5px 0; color: #ccc;">Sito web in anteprima per cessione/vendita attività commerciale</p>
@@ -102,20 +95,19 @@
         <div class="logo-mark">KS</div>
         <span>Karalji Sadat</span>
       </a>
-      <div class="nav-right">
-        <nav class="menu">
-          <a href="#servizi">Servizi</a>
-          <a href="#lavori">Lavori</a>
-          <a href="#chi-siamo">Chi siamo</a>
-        </nav>
-        <div class="nav-actions">
-          <button onclick="mostraAvvisoContatto()" class="btn-nav cta-green"><span class="icon-purple">📞</span>Chiama Ora</button>
-        </div>
-      </div>
+      <nav class="menu">
+        <a href="#servizi">Servizi</a>
+        <a href="#lavori">Lavori</a>
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#contatti" class="cta">Preventivo</a>
+        <!-- Pulsante con Avviso nel Menu Navigazione -->
+        <button onclick="mostraAvvisoContatto()" class="btn-call-nav">📞 Contatto Telefonico</button>
+      </nav>
     </div>
   </header>
 
   <main id="top">
+    <!-- Hero Section -->
     <section class="hero">
       <div class="wrap grid">
         <div>
@@ -128,14 +120,16 @@
           </div>
           <div class="buttons">
             <a href="#contatti" class="btn">Richiedi un preventivo</a>
+            <button onclick="mostraAvvisoContatto()" class="btn call-action">📞 Chiama Ora</button>
           </div>
         </div>
         <div class="hero-img-box">
-          <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cantiere edile in interno, ristrutturazione muraria">
+          <img src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Operai edili al lavoro in cantiere">
         </div>
       </div>
     </section>
 
+    <!-- Sezione Servizi -->
     <section id="servizi" style="padding: 64px 20px; background-color: #f8f9fa; text-align: center;">
       <h2 style="margin-bottom: 10px;">I Nostri Servizi Edili</h2>
       <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto 40px auto;">
@@ -189,6 +183,7 @@
       </div>
     </section>
 
+    <!-- Sezione Lavori Recenti -->
     <section id="lavori">
       <div class="wrap">
         <h2>Lavori recenti</h2>
@@ -196,31 +191,31 @@
           
           <div class="shot-card">
             <div class="shot">
-              <img src="https://images.pexels.com/photos/7511699/pexels-photo-7511699.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fase avanzata di piastrellatura bagno moderno">
+              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=600&auto=format&fit=crop" alt="Ristrutturazione Bagno Moderno">
             </div>
             <div class="shot-desc">
-              <h4>Finiture e Rivestimenti</h4>
-              <p>Posa in opera speciale di rivestimenti in gres porcellanato di grande formato e piatti doccia a filo pavimento.</p>
+              <h4>Ristrutturazione Bagno</h4>
+              <p>Rifacimento completo degli impianti idraulici, posa di rivestimenti moderni e installazione di sanitari di design.</p>
             </div>
           </div>
           
           <div class="shot-card">
             <div class="shot">
-              <img src="https://images.pexels.com/photos/5974373/pexels-photo-5974373.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Muratore al lavoro con livella su nuova parete">
+              <img src="https://images.pexels.com/photos/5974394/pexels-photo-5974394.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lavori di rifacimento tetto">
             </div>
             <div class="shot-desc">
-              <h4>Opere Murarie</h4>
-              <p>Innalzamento tramezzature, rasatura pareti, assistenze impiantistiche e ripristini strutturali a regola d'arte.</p>
+              <h4>Rifacimento Tetti</h4>
+              <p>Intervento di manutenzione straordinaria della copertura con impermeabilizzazione, isolamento e posa delle nuove tegole.</p>
             </div>
           </div>
           
           <div class="shot-card">
             <div class="shot">
-              <img src="https://images.pexels.com/photos/10184131/pexels-photo-10184131.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Isolamento di un sottotetto o controparete">
+              <img src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Imbianchino che pittura la parete interna">
             </div>
             <div class="shot-desc">
-              <h4>Isolamenti e Cartongesso</h4>
-              <p>Montaggio di contropareti isolanti e strutture in cartongesso per ottimizzare l'efficienza termoacustica degli ambienti.</p>
+              <h4>Imbiancatura Interni</h4>
+              <p>Rasatura a gesso protettiva e tinteggiatura di interni residenziali con finiture precise e prodotti antimuffa di alta qualità.</p>
             </div>
           </div>
 
@@ -228,6 +223,33 @@
       </div>
     </section>
 
+    <!-- Sezione: Trasformazioni Prima e Dopo -->
+    <section id="prima-dopo" style="background-color: #eef3f6;">
+      <div class="wrap">
+        <h2>Esempio di Trasformazione (Prima / Dopo)</h2>
+        <p style="text-align: center; color: #555; max-width: 600px; margin: -10px auto 30px auto; font-size: 15px;">
+          Guarda la qualità dei nostri interventi di ristrutturazione completa, dalle prime fases di demolizione fino alla consegna finale.
+        </p>
+        
+        <div class="compare-container">
+          <div class="compare-grid">
+            <div class="compare-box">
+              <img src="https://images.pexels.com/photos/5691642/pexels-photo-5691642.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Stato iniziale bagno demolito cantiere">
+              <span class="compare-label" style="background-color: #dc3545;">Prima (Cantiere)</span>
+            </div>
+            <div class="compare-box">
+              <img src="https://images.pexels.com/photos/1454834/pexels-photo-1454834.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bagno moderno terminato ristrutturato">
+              <span class="compare-label" style="background-color: #28a745;">Dopo (Finito)</span>
+            </div>
+          </div>
+          <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #444;">
+            <strong>Progetto:</strong> Rifacimento completo bagno residenziale (impianti, massetto, piastrelle e sanitari).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chi Siamo -->
     <section id="chi-siamo">
       <div class="wrap cols">
         <div>
@@ -249,6 +271,7 @@
       </div>
     </section>
 
+    <!-- Recensioni -->
     <section id="recensioni">
       <div class="wrap">
         <h2>Recensioni clienti</h2>
@@ -269,6 +292,7 @@
       </div>
     </section>
 
+    <!-- FAQ -->
     <section id="faq" class="faq">
       <div class="wrap">
         <h2>Domande frequenti</h2>
@@ -280,13 +304,10 @@
           <summary>Fornite supporto per pratiche edilizie e bonus a Siena?</summary>
           <p style="margin-top: 10px; color: #555;">Sì, collaboriamo con tecnici e geometri locali per la gestione di CILA, SCIA e per l'allineamento alle attuali normative di detrazione fiscale.</p>
         </details>
-        <details>
-          <summary>Come viene calcolato il preventivo e quanto costa il sopralluogo?</summary>
-          <p style="margin-top: 10px; color: #555;">Il sopralluogo e il preventivo dettagliato (capitolato) sono completamente gratuiti e senza impegno. Calcoliamo i costi in base alle reali ore di lavorazione e ai materiali scelti, garantendo zero sorprese finali.</p>
-        </details>
       </div>
     </section>
 
+    <!-- Contatti -->
     <section id="contatti">
       <div class="wrap">
         <div class="cta-band">
@@ -313,7 +334,8 @@
             <h3 style="margin:0 0 15px;font-family:Poppins;color:#0e4a62">Contatti e info ditta</h3>
             <p style="margin-bottom: 15px;">I dati fiscali completi verranno riattivati ed aggiornati al completamento delle operazioni legali di cessione d'attività.</p>
             
-            <button onclick="mostraAvvisoContatto()" style="display: inline-block; background-color: #0e4a62; color: white; padding: 14px 20px; border-radius: 10px; font-weight: bold; font-size: 16px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 0; cursor: pointer; font-family: inherit;">📞 Contatto Telefonico</button>
+            <!-- Bottone Contatto Informativo in sezione Contatti -->
+            <button onclick="mostraAvvisoContatto()" style="display: inline-block; background-color: #28a745; color: white; padding: 14px 20px; border-radius: 10px; font-weight: bold; font-size: 16px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 0; cursor: pointer; font-family: inherit;">📞 Contatto Telefonico</button>
             
             <p><strong>Email provvisoria:</strong> info@karaljisadat.it</p>
             <iframe title="Mappa Cantiere" src="https://maps.google.com/maps?q=Siena&t=&z=10&ie=UTF8&iwloc=&output=embed" width="100%" height="200" style="border:0;border-radius:12px;margin-top:15px"></iframe>
@@ -323,6 +345,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="wrap">
       <p style="margin: 5px 0; color: #fff; font-size: 16px;"><strong>© 2026 Karalji Sadat Ristrutturazioni</strong></p>
