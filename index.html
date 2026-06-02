@@ -32,10 +32,6 @@
     .sub{font-size:18px;color:var(--muted);margin:0 0 22px}
     .badges{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 28px}
     .badge{background:#e8f1f5;color:#0e4a62;border:1px solid #d3e3ea;padding:8px 12px;border-radius:999px;font-size:14px}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700}
-    .btn.secondary{background:#fff;color:var(--brand);border:1px solid #cfe0e7}
-    .btn.call-action{background:#28a745;color:#fff;cursor:pointer;border:0;font-size:16px;font-family:inherit;}
     section{padding:64px 0}
     h2{font-family:Poppins,system-ui;font-size:28px;margin:0 0 22px;color:var(--brand);text-align:center}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -78,7 +74,7 @@
   </style>
   <script>
     function mostraAvvisoContatto() {
-      alert("Il contatto telefonico diretto verrà inserito e attivato solo al completamento delle operazioni legali di cessione dell'attività.");
+      alert("Il contatto telefonico directo verrà inserito e attivato solo al completamento delle operazioni legali di cessione dell'attività.");
     }
   </script>
 </head>
@@ -118,10 +114,6 @@
             <span class="badge">Sopralluogo gratuito Siena e dintorni</span>
             <span class="badge">Capitolato chiaro</span>
             <span class="badge">Garanzia sui lavori</span>
-          </div>
-          <div class="buttons">
-            <a href="#contatti" class="btn">Richiedi un preventivo</a>
-            <button onclick="mostraAvvisoContatto()" class="btn call-action">📞 Chiama Ora</button>
           </div>
         </div>
         <div class="hero-img-box">
@@ -224,7 +216,31 @@
       </div>
     </section>
 
-   
+    <!-- Sezione: Trasformazioni Prima e Dopo -->
+    <section id="prima-dopo" style="background-color: #eef3f6;">
+      <div class="wrap">
+        <h2>Esempio di Trasformazione (Prima / Dopo)</h2>
+        <p style="text-align: center; color: #555; max-width: 600px; margin: -10px auto 30px auto; font-size: 15px;">
+          Guarda la qualità dei nostri interventi di ristrutturazione completa, dalle prime fasi di demolizione fino alla consegna finale.
+        </p>
+        
+        <div class="compare-container">
+          <div class="compare-grid">
+            <div class="compare-box">
+              <img src="https://images.pexels.com/photos/5691642/pexels-photo-5691642.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Stato iniziale bagno demolito cantiere">
+              <span class="compare-label" style="background-color: #dc3545;">Prima (Cantiere)</span>
+            </div>
+            <div class="compare-box">
+              <img src="https://images.pexels.com/photos/1454834/pexels-photo-1454834.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bagno moderno terminato ristrutturato">
+              <span class="compare-label" style="background-color: #28a745;">Dopo (Finito)</span>
+            </div>
+          </div>
+          <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #444;">
+            <strong>Progetto:</strong> Rifacimento completo bagno residenziale (impianti, massetto, piastrelle e sanitari).
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Chi Siamo -->
     <section id="chi-siamo">
@@ -280,6 +296,10 @@
         <details>
           <summary>Fornite supporto per pratiche edilizie e bonus a Siena?</summary>
           <p style="margin-top: 10px; color: #555;">Sì, collaboriamo con tecnici e geometri locali per la gestione di CILA, SCIA e per l'allineamento alle attuali normative di detrazione fiscale.</p>
+        </details>
+        <details>
+          <summary>Come gestite la pulizia e l'organizzazione degli ambienti durante i lavori?</summary>
+          <p style="margin-top: 10px; color: #555;">Proteggiamo accuratamente le zone di passaggio con teli e supporti specifici. A fine giornata il cantiere viene sempre sgomberato dai detriti più ingombranti e, alla consegna finale, eseguiamo una pulizia approfondita per rendere l'immobile immediatamente abitabile.</p>
         </details>
       </div>
     </section>
